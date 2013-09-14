@@ -1,0 +1,11 @@
+# Ignore the clutter
+assets/
+__MACOSX/
+_archive/
+.DS_Store
+
+#Ignore files that Git doesnt need/can't to track
+fonts/
+images/
+*.png
+*.jpg
