@@ -1,98 +1,90 @@
-/*----------------------------------------------------------
-Reset
-----------------------------------------------------------*/
-/*----------------------------------------------------------
-Reset
-----------------------------------------------------------*/
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -106,9 +98,6 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
 ol,
 ul {
   list-style: none;
@@ -117,20 +106,17 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
-  content: '';
+blockquote:before,
+q:after,
+q:before {
+  content: "";
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*----------------------------------------------------------
-Slabtext
-----------------------------------------------------------*/
 .slabtext-container {
   text-align: center;
 }
@@ -145,35 +131,37 @@ Slabtext
   font-size: 1em !important;
   letter-spacing: inherit !important;
   word-spacing: inherit !important;
-  *letter-spacing: 0 !important;
-  *word-spacing: 0 !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
 }
 .slabtextdone .slabtext {
   display: block;
   line-height: 0.85;
 }
-/*----------------------------------------------------------
-Typography
-----------------------------------------------------------*/
 @font-face {
-  font-family: 'LeagueGothicRegular';
-  src: url('../fonts/League_Gothic-webfont.eot');
-  src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/League_Gothic-webfont.woff') format('woff'), url('../fonts/League_Gothic-webfont.ttf') format('truetype'), url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
-  font-weight: normal;
+  font-family: LeagueGothicRegular;
+  src: url(../fonts/League_Gothic-webfont.eot);
+  src: url(../fonts/League_Gothic-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(../fonts/League_Gothic-webfont.woff) format("woff"),
+    url(../fonts/League_Gothic-webfont.ttf) format("truetype"),
+    url(../fonts/League_Gothic-webfont.svg#LeagueGothicRegular) format("svg");
+  font-weight: 400;
   font-style: normal;
 }
 body {
-  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", sans-serif;
+  font-family: HelveticaNeue, "Helvetica Neue", HelveticaNeueRoman,
+    HelveticaNeue-Roman, sans-serif;
   color: #333437;
   font-size: 16px;
   line-height: 24px;
 }
 h1,
 h2 {
-  font-family: 'LeagueGothicRegular', Arial, sans-serif;
+  font-family: LeagueGothicRegular, Arial, sans-serif;
   letter-spacing: 0;
   font-size: 300%;
-  font-weight: normal;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
   text-align: left;
@@ -181,17 +169,10 @@ h2 {
 h2 {
   font-size: 150%;
   margin: 10px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   padding: 10px 0;
 }
-/*----------------------------------------------------------
-Custom Mixins
-----------------------------------------------------------*//* When using a sprite, just define the width of the icons, then a multiplier, ie:
-	@iconwidthis:20px; and multiplier is 2 (the second icon in the sprite) */
-/*----------------------------------------------------------
-Structure
-----------------------------------------------------------*/
 .container {
   width: 940px;
   margin: auto;
@@ -200,8 +181,8 @@ header.container {
   padding-top: 45px;
 }
 #social {
-  margin: 50px 0 25px;
-  padding: 0px 10px;
+  margin: 25px 0 25px;
+  padding: 0 10px;
   display: block;
   height: 42px;
 }
@@ -216,11 +197,11 @@ header.container {
   display: block;
   width: 38px;
   height: 42px;
-  background: url('../images/social-icons.png') no-repeat;
+  background: url(../images/social-icons.png) no-repeat;
   text-indent: -9999px;
 }
 #social-icons li a.facebook {
-  background-position: 0px 0;
+  background-position: 0 0;
 }
 #social-icons li a.twitter {
   background-position: -39px 0;
@@ -243,13 +224,14 @@ header.container {
 #social-icons li a.pinterest {
   background-position: -273px 0;
 }
-span.email-info {
-  display:block;
-  float: right;
+#social-icons li a.github {
+  background-position: -313px 0;
 }
-/*----------------------------------------------------------
-Portfolio
-----------------------------------------------------------*/
+span.email-info {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
 .item {
   width: 290px;
   margin: 10px;
@@ -258,20 +240,17 @@ Portfolio
 .item img {
   width: 290px;
 }
-/*----------------------------------------------------------
-Misc
-----------------------------------------------------------*/
 span[class*="line"] {
   display: block;
 }
 .portfolio {
-  margin-top: 0px;
+  margin-top: 0;
 }
 .g0ldman li img {
-  border: 5px solid blue;
+  border: 5px solid #00f;
 }
 a.fadeOut {
-  color: black;
+  color: #000;
   text-decoration: none;
   border-bottom: 0.075em solid rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 0.75s ease;
@@ -280,10 +259,10 @@ a.fadeOut {
   transition: opacity 0.75s ease;
 }
 a.fadeOut:hover {
-  opacity: .35;
+  opacity: 0.35;
 }
 #social-icons a {
-  opacity: .75;
+  opacity: 0.75;
   -webkit-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
@@ -293,18 +272,15 @@ a.fadeOut:hover {
   opacity: 1;
 }
 footer {
-  background-color: black;
+  background-color: #000;
   padding: 10px;
-  color: #CCC;
+  color: #ccc;
 }
 div.pp_default .pp_description {
   margin: 5px 50px 5px 120px;
 }
-/*----------------------------------------------------------
-Award Medal Animation
-----------------------------------------------------------*/
-div.strap,
-div.medal {
+div.medal,
+div.strap {
   background-image: url(../images/award-hover.png);
   height: 49px;
   width: 42px;
@@ -323,13 +299,9 @@ div.award {
   right: 38px;
   opacity: 0;
   -webkit-transform: rotate(-20deg);
-  /* Safari and Chrome */
-
   -moz-transform: rotate(-20deg);
   -o-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
-  /* IE 9 */
-
   transform: rotate(-20deg);
 }
 a.award:hover div.award {
@@ -337,16 +309,10 @@ a.award:hover div.award {
   right: 38px;
   opacity: 1;
   -webkit-transform: rotate(0deg);
-  /* Safari and Chrome */
-
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
-  /* IE 9 */
-
   transform: rotate(0deg);
-}
-a.award:hover div.award {
   animation: awardAnimation 0.08s 1 ease-in;
   -webkit-animation: awardAnimation 0.08s 1 ease-in;
 }
@@ -354,7 +320,6 @@ a.award:hover div.medal {
   animation: medalSwing 0.8s 1 ease-out;
   -webkit-animation: medalSwing 0.8s 1 ease-out;
 }
-/* Animation */
 @keyframes awardAnimation {
   0% {
     top: -4px;
@@ -405,9 +370,6 @@ a.award:hover div.medal {
     -webkit-transform: rotate(0deg);
   }
 }
-/*----------------------------------------------------------
-Media Queries
-----------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .container {
     width: 768px;
@@ -421,9 +383,7 @@ Media Queries
     width: 280px;
     padding-top: 25px;
   }
-  .item {
-    width: 120px;
-  }
+  .item,
   .item img {
     width: 120px;
   }
@@ -433,7 +393,7 @@ Media Queries
     margin: auto;
   }
   #social-icons li {
-    margin: 0px 8px 8px 0px;
+    margin: 0 8px 8px 0;
   }
   #social {
     height: auto;
@@ -447,6 +407,7 @@ Media Queries
     display: block;
     float: none;
     margin: 20px 0;
+    padding: 10px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
